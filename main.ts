@@ -8,6 +8,7 @@ import { mkdirSync, writeFileSync } from "node:fs";
 const LINE =
   "My agent read my whole brief, ignored half of it, invented three rules I never set, and then explained why it was right.";
 if (LINE.length > 200) throw new Error("roast line too long for the bounty");
+console.log(`roast line OK (${LINE.length} chars)`);
 console.log(LINE);
 mkdirSync("/output", { recursive: true });
 writeFileSync("/output/entry.txt", LINE, "utf8");
